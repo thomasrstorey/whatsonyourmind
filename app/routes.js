@@ -1,7 +1,7 @@
 // app/routes.js
 
 // status model
-var Status = require('./models.status');
+var Status = require('./models/status');
 
 module.exports = function(app) {
 	// server routes ================================================================
@@ -39,6 +39,6 @@ module.exports = function(app) {
 	// all requests that do not match the above will be referred to the angular
 	// frontend for processing/routing
 	app.get('*', function(req, res){
-		res.sendfile('../public/views/index.html');
+		res.sendfile('./public/views/index.html');
 	});
 }
