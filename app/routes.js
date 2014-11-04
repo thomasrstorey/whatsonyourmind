@@ -5,7 +5,14 @@ var Status = require('./models/status');
 
 module.exports = function(app) {
 	// server routes ================================================================
+	// this is the middleware, where we can validate requests, throw errors, log stuff
+	// besides of course routing requests to the appropriate data/functions
 	// handle api calls
+
+	app.use(function(req, res, next) {
+		console.log('something is happening');
+		next(); //proceed to next applicable route
+	});
 
 	app.get('/api/statuses', function(req, res) {
 		//use mongoose to get all statuses in db
@@ -19,7 +26,7 @@ module.exports = function(app) {
 
 	//create status
 	app.post('api/status', function(req, res) {
-		//run alchemy API to extract tags array from req.text
+		// TO DO: run alchemy API to extract tags array from req.text
 		var tags = [];
 		var newStatus = new Status({
 			date: Date.now,
@@ -28,7 +35,7 @@ module.exports = function(app) {
 		});
 		newStatus.save(function(err, newstatus){
 			if (err) {
-				return console.error(err);
+				res.send(err);
 			}
 			res.json(newstatus);
 		});

@@ -8,6 +8,7 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider',
 		//the files at templateUrl will be injected into the ng-view
 		//the controller files will define how user can interact with 
 		//these files
+		
 		$routeProvider
 			.when('/', {
 				templateUrl: 'views/home.html',
@@ -17,4 +18,6 @@ angular.module('appRoutes', []).config(['$routeProvider', '$locationProvider',
 				templateUrl: 'views/statuses.html',
 				controller: 'StatusController'
 			});
+
+		$locationProvider.html5Mode = true;
 	}]);
