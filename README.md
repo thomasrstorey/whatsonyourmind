@@ -10,7 +10,14 @@
 
 ### Backend
 
+* /app  
+
+   this folder holds controllers, routes, backend (Node) specific items  
+
 * server.js  
-...
+
+...  
+
 * config  
+
 ...
