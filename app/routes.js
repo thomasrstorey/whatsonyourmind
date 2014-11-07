@@ -9,10 +9,10 @@ module.exports = function(app) {
 	// besides of course routing requests to the appropriate data/functions
 	// handle api calls
 
-	app.use(function(req, res, next) {
+	/*app.use(function(req, res, next) {
 		console.log('something is happening');
 		next(); //proceed to next applicable route
-	});
+	});*/
 
 	app.get('/api/statuses', function(req, res) {
 		//use mongoose to get all statuses in db
@@ -25,12 +25,13 @@ module.exports = function(app) {
 	});
 
 	//create status
-	app.post('api/status', function(req, res) {
+	app.post('/api/status', function(req, res) {
+		console.log("POST api/status");
 		// TO DO: run alchemy API to extract tags array from req.text
 		var tags = [];
 		var newStatus = new Status({
-			date: Date.now,
-			text: req.text,
+			date: Date.now(),
+			text: req.body.text,
 			tags: tags
 		});
 		newStatus.save(function(err, newstatus){
