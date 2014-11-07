@@ -150,14 +150,14 @@
 	  border-radius: 3px;
 	  color: #444;
 	  display: inline-block;
-	  font-size: 11px;
+	  font-size: 13px;
 	  font-weight: bold;
 	  text-decoration: none;
 	  text-shadow: 0 1px rgba(255, 255, 255, .75);
 	  cursor: pointer;
 	  margin-bottom: 20px;
 	  line-height: normal;
-	  padding: 8px 10px;
+	  padding: 7px 10px;
 	  font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; }
 
 	.button:hover,
@@ -201,6 +201,10 @@
 		padding-right: 0 !important;
 		text-align: center; }
 
+	.button.inline {
+		display: inline !important;
+	}
+
 	/* Fix for odd Mozilla border & padding issues */
 	button::-moz-focus-inner,
 	input::-moz-focus-inner {
@@ -222,7 +226,7 @@
 	textarea,
 	select {
 		border: 1px solid #ccc;
-		padding: 6px 4px;
+		padding: 7px;
 		outline: none;
 		-moz-border-radius: 2px;
 		-webkit-border-radius: 2px;

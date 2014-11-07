@@ -18,7 +18,7 @@
 ================================================== */
 
 .center {
-   width: 300px;
+   width: 400px;
    height: 100%;
    position: absolute;
    left: 50%;
@@ -30,6 +30,7 @@
 	margin-top: 50%;
 	margin-left: auto;
 	margin-right: auto;
+	display: inline-block;
 }
 
 /* #Page Styles
