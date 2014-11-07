@@ -1,3 +1,15 @@
 <div class="row">
-	<h1>{{ title }}</h1>
+	<div class="center">
+
+	 <div class="status" ng-repeat="status in statuses">
+
+	 <p class="status_text">
+	 	{{ status.text }}
+	 </p>
+	 <p class="status_time">
+	 	{{ status.date }}
+	 </p>
+	 <hr />
+	 </div>
+	</div>
 </div>
