@@ -1,10 +1,19 @@
 {
 	"name"			: "whats-on-your-mind",
 	"main"			: "server.js",
+	"repository": {
+    "type": "git",
+    "url": "git://github.com/thomasrstorey/whatsonyourmind.git"
+  },
 	"dependencies"	: {
 		"express"			: "~4.5.1",
 		"mongoose"			: "~3.8.0",
 		"body-parser"		: "~1.4.2",
-		"method-override" 	: "~2.0.2"
+		"method-override" 	: "~2.0.2",
+		"natural"			: "~0.1.28",
+		"wordpos"			: "~0.1.15",
+		"underscore"		: "~1.7.0",
+		"WNdb"				: "~3.1.1",
+		"commander"			: "~1.1.1"
 	}
 }
